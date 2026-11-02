@@ -119,6 +119,17 @@ code { padding: 2px 5px; border-radius: 5px; background: #edf2f8; font-size: .9e
   .project-icon { width: 34px; height: 34px; }
 }
 
+@media (max-width: 600px) {
+  .note-item {
+    flex-direction: column;
+  }
+
+  .note-image {
+    width: 180px;
+    flex: none;
+  }
+}
+
 .image-preview {
   padding: 0;
   border: none;
@@ -168,4 +179,30 @@ code { padding: 2px 5px; border-radius: 5px; background: #edf2f8; font-size: .9e
   background: none;
   font-size: 30px;
   cursor: pointer;
+}
+
+.note-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.note-image {
+  flex: 0 0 180px;
+}
+
+.note-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: zoom-in;
+}
+
+.note-image img:hover {
+  opacity: 0.85;
+}
+
+.note-item > div:last-child {
+  flex: 1;
+  min-width: 0;
 }
