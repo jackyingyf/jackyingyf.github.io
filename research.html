@@ -64,7 +64,14 @@
       </article>
       
       <article class="note-item">
-        <div class="note-date">2022–2026</div>
+        <div class="note-date">
+          <img
+      src="images/breaking.png"
+      alt="Breaking experiment"
+      class="research-image"
+      onclick="openLightbox(this)"
+    >
+          </div>
         <div>
           <h3>Processing structural dependencies in <i>wh</i>-questions during infancy</h3>
           <p>
@@ -220,5 +227,20 @@
     <p>© <span id="year">2026</span> Yuanfan Ying</p>
     <p>Language Acquisition · Processing · Modeling</p>
   </footer>
+
+  <dialog id="imageLightbox" onclick="if(event.target === this) this.close()">
+  <button class="close-lightbox"
+    onclick="document.getElementById('imageLightbox').close()"
+    aria-label="Close image">&times;</button>
+  <img id="lightboxImage" src="" alt="Enlarged research image">
+</dialog>
+
+<script>
+  function openLightbox(image) {
+    document.getElementById("lightboxImage").src = image.src;
+    document.getElementById("imageLightbox").showModal();
+  }
+</script>
+  
 </body>
 </html>
