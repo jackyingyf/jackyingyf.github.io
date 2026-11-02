@@ -182,20 +182,24 @@ code { padding: 2px 5px; border-radius: 5px; background: #edf2f8; font-size: .9e
 }
 
 .note-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
 }
 
 .note-image {
-  flex: 0 0 180px;
+  width: 220px;
 }
 
-.note-image img {
+.note-item .note-image img.research-image {
+  display: block;
   width: 100%;
+  max-width: 220px;
   height: auto;
   border-radius: 8px;
   cursor: zoom-in;
+  object-fit: contain;
 }
 
 .note-image img:hover {
